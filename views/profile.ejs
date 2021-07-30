@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="/style.css"> -->
+    <title>Profile</title>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <ul>
+                <li><a href="/">Home</a></li>
+            </ul>
+        </div>
+    </header>
+    
+    <div class="container">
+    	<div class="welcome">
+    		<h1>Welcome to your Profile!</h1>
+    		<p>Here is your current profile log in information:</p>
+    	</div>
+    
+    	<%if(typeof(sess) != "undefined"){%>
+    
+    		<p><strong>Email:</strong> <%=sess.email%></p>
+    		<p><strong>Password:</strong> <%=sess.password%></p>
+    	
+		<%}%>
+    </div>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header{
+            background-color: rgb(32, 28, 28);
+            padding: 30px 0;
+        }
+        
+        body{
+        	font-family: 'Roboto', sans-serif;
+        }
+
+        .nav-container{
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: right;
+        }
+
+        ul{
+            list-style: none;
+        }
+
+        li{
+            font-size: 20px;
+        }
+
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        
+        .container{
+        	max-width: 1000px;
+        	margin: 50px auto 0;
+        }
+        
+        .welcome{
+        	margin-bottom: 50px;
+        }
+        
+        .welcome p{
+        	font-style: italic;
+        }
+        
+        
+
+    </style>
+</body>
+</html>
